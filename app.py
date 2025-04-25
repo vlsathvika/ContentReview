@@ -18,7 +18,7 @@ if not os.path.exists(repo_path):
         st.error("GITHUB_TOKEN is missing. Please add it to Streamlit Secrets.")
 
 # Execute the script
-script_path = os.path.join(repo_path, 'persona_s.py')
+script_path = os.path.join(repo_path, 'app_trial.py')
 if os.path.exists(script_path):
     try:
         exec(open(script_path).read())
