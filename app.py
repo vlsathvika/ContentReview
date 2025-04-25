@@ -2,7 +2,7 @@ import os
 import subprocess
 import streamlit as st
 
-repo_path = 'AIpersona'
+repo_path = 'content_review_agent'
 
 # Clone the repository only if it doesn't exist
 if not os.path.exists(repo_path):
