@@ -1,13 +1,14 @@
-import os
 import subprocess
+import os
 import streamlit as st
 
 repo_path = 'content_review_agent'
 
 # Clone the repository only if it doesn't exist
 if not os.path.exists(repo_path):
-    token = st.secrets["GITHUB_TOKEN"]
+    token = st.secrets["GITHUB_TOKEN"]  # Get the token from Streamlit Secrets
     if token:
+        # Use token to access the private repository
         repo_url = f"https://{token}@github.com/vlsathvika/content_review_agent.git"
         try:
             subprocess.run(['git', 'clone', repo_url, repo_path], check=True)
@@ -17,12 +18,3 @@ if not os.path.exists(repo_path):
     else:
         st.error("GITHUB_TOKEN is missing. Please add it to Streamlit Secrets.")
 
-# Execute the script
-script_path = os.path.join(repo_path, 'app_trial.py')
-if os.path.exists(script_path):
-    try:
-        exec(open(script_path).read())
-    except Exception as e:
-        st.error(f"Error while running the script: {e}")
-else:
-    st.error(f"{script_path} not found.")
