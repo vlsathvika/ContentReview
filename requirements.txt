@@ -1,13 +1,13 @@
-streamlit==1.10.0          # For building the web app interface
-requests==2.28.1           # For making API requests (e.g., to Perplexity API)
-pandas==1.5.3              # For handling dataframes and data processing
-numpy==1.23.5              # For numerical computations (if needed)
-nltk==3.7.1                # For natural language processing (e.g., text analysis, tokenization)
-spacy==3.2.0               # For NLP tasks (optional, depending on your setup)
-scikit-learn==1.1.2        # For machine learning tasks (e.g., for classification, clustering, etc.)
-scipy==1.9.3               # For scientific computing (optional, depending on your ML tasks)
-matplotlib==3.6.2          # For plotting and data visualization
-perplexity==0.1.0          # For Perplexity API integration (if using official library)
-beautifulsoup4==4.11.1     # For web scraping, if needed for collecting content (optional)
-html5lib==1.1              # For parsing HTML (if you're scraping content from websites)
-pytest==7.1.3              # For unit testing (optional, for testing purposes)
+streamlit
+requests
+pandas
+numpy
+nltk
+spacy
+openai
+python-docx
+pytest
+beautifulsoup4
+lxml
+scikit-learn
+scipy
