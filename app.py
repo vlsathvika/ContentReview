@@ -6,7 +6,7 @@ repo_path = 'content_review_agent'
 
 # Clone the repository only if it doesn't exist
 if not os.path.exists(repo_path):
-    token = os.getenv("GITHUB_TOKEN")
+    token = st.secrets["GITHUB_TOKEN"]
     if token:
         repo_url = f"https://{token}@github.com/vlsathvika/content_review_agent.git"
         try:
